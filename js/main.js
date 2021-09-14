@@ -77,8 +77,9 @@ function manejarErrores(errores) {
       $error.textContent = error;
       $errores.appendChild($error);
     } else {
-      //borrar campo adecuado
       document.formulario[llave].className = "";
+      const $errores = document.querySelector("#errores");
+      $errores.innerHTML = "";
     }
   });
   console.log(contadorErrores);
